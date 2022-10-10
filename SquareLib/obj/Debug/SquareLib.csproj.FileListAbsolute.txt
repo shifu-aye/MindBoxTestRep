@@ -1,0 +1,6 @@
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\bin\Debug\SquareLib.dll
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\bin\Debug\SquareLib.pdb
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\obj\Debug\SquareLib.csproj.AssemblyReference.cache
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\obj\Debug\SquareLib.csproj.CoreCompileInputs.cache
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\obj\Debug\SquareLib.dll
+C:\Users\alesh\source\repos\WebApplication1\SquareLib\obj\Debug\SquareLib.pdb
