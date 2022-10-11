@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,21 @@ namespace SquareLib
             Side3 = side3;
             double HalfPerimetr = (side1 + side2 + side3) / 2;
             double area = Math.Sqrt(HalfPerimetr * (HalfPerimetr - side1) * (HalfPerimetr - side2) * HalfPerimetr - side3);
+            
             return area;
+        }
+        public string isRectangularTriangle(double side1, double side2, double side3)
+        {
+            string isRectangularTriangle;
+            if (Math.Pow(side1, 2) + Math.Pow(side2, 2) == Math.Pow(side3, 2))
+            {
+                isRectangularTriangle = "Треугольник прямоугольный";
+            }
+            else
+            {
+                isRectangularTriangle = "Треугольник не прямоугольный";
+            }
+            return isRectangularTriangle;
         }
     }
 }

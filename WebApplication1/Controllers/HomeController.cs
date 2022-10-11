@@ -24,6 +24,10 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult TriangleView()
+        {
+            return View();
+        }
         
         [HttpPost]
         public IActionResult Index(double RadiusTB)
@@ -56,6 +60,23 @@ namespace WebApplication1.Controllers
                 return View();
             }    
         }
+
+        [HttpPost]
+        public IActionResult TriangleView(double Side1TB, double Side2TB, double Side3TB)
+        {
+            try
+            {
+                Area area = new Area();
+                string answer = area.isRectangularTriangle(Side1TB, Side2TB, Side3TB);
+                ViewBag.Triangle = answer;
+                return View(area);
+            }
+            catch(Exception ex)
+            {
+                return View(ex.Message.ToString());
+            }
+        }
+
         public IActionResult Privacy()
         {
             return View();
