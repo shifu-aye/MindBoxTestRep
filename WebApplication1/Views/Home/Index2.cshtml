@@ -1,17 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<form method="post">
-    <div class="text-center">
-        <h1 class="display-4">Веб-приложение по вычислению площади:</h1>
-        <div class="TriangleArea">
-            @Html.Label("Введите три стороны для вычисления площади треугольника");
-            <input type="number" name="Side1TB" />
-            <input type="number" name="Side2TB"/>
-            <input type="number" name="Side3TB" />
-            <input type="submit" value="Посчитать"/>
-            <p>@ViewBag.TriangleArea</p>
-        </div>
+﻿<form method="post">
+    @Html.Label("Введите три стороны для вычисления площади треугольника");
+    <div class="TriangleArea">
+        <input type="number" name="Side1TB"  value="Введите первую сторону.."/>
+        <input type="number" name="Side2TB" value="Введите вторую сторону.." />
+        <input type="number" name="Side3TB" value="Введите третью сторону.." />
+        <input type="submit" value="Посчитать" onclick="TriangleClick();"/>
     </div>
 </form>
-
+<p><span id="ResultTB"></span>@Model</p>

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareLib", "SquareLib\SquareLib.csproj", "{51EBEA50-1C0C-4B01-ABBF-A2ED4F6C3A53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindBoxUnitTest", "MindBoxUnitTest\MindBoxUnitTest.csproj", "{8B33D994-CA06-4F40-8DB9-D3E15DFBD38A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{51EBEA50-1C0C-4B01-ABBF-A2ED4F6C3A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51EBEA50-1C0C-4B01-ABBF-A2ED4F6C3A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51EBEA50-1C0C-4B01-ABBF-A2ED4F6C3A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B33D994-CA06-4F40-8DB9-D3E15DFBD38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B33D994-CA06-4F40-8DB9-D3E15DFBD38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B33D994-CA06-4F40-8DB9-D3E15DFBD38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B33D994-CA06-4F40-8DB9-D3E15DFBD38A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

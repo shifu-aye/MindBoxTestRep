@@ -1,15 +1,25 @@
-﻿@{
+﻿@model string
+@{
     ViewData["Title"] = "Home Page";
 }
-<form method="post">
+<form method="post" asp-action="Index"> 
     <div class="text-center">
         <h1 class="display-4">Веб-приложение по вычислению площади:</h1>
         <div class="CircleArea">
             @Html.Label("Введите радиус для вычисления площади круга");
             <input type="number" name="RadiusTB"/>
-            <input type="submit" value="Посчитать"/>
-            <p>@ViewBag.CircleArea</p>
+            <input type="submit" value="Посчитать" onclick="CircleClick();"/>
         </div>
     </div>
 </form>
+<form method="post" asp-action="Index2">
+    @Html.Label("Введите три стороны для вычисления площади треугольника");
+    <div class="TriangleArea">
+        <input type="number" name="Side1TB"  value="Введите первую сторону.."/>
+        <input type="number" name="Side2TB" value="Введите вторую сторону.." />
+        <input type="number" name="Side3TB" value="Введите третью сторону.." />
+        <input type="submit" value="Посчитать" onclick="TriangleClick();"/>
+    </div>
+</form>
+<p><span id="ResultTB"></span>@Model</p>
 

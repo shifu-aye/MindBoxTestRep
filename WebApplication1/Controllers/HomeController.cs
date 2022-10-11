@@ -20,62 +20,19 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Index2()
-        {
-            return View();
-        }
-        public IActionResult TriangleView()
-        {
-            return View();
-        }
-        
+
         [HttpPost]
         public IActionResult Index(double RadiusTB)
         {
-            try
-            {
-                Area area = new Area();
-                ViewBag.CircleArea = area.CircleАrea(RadiusTB);
-                return View(area);
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
-                return View();
-            }
-            
-        }
-        [HttpPost]
-        public IActionResult Index2(double Side1TB, double Side2TB, double Side3TB)
-        {
-            try
-            {
-                Area area = new Area();
-                ViewBag.TriangleArea = area.TriangleАrea(Side1TB, Side2TB, Side3TB);
-                return View(area);
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
-                return View();
-            }    
+            return View("Index", $"Площадь окружности = {Convert.ToString(new Circle(RadiusTB).Area())}");
         }
 
         [HttpPost]
-        public IActionResult TriangleView(double Side1TB, double Side2TB, double Side3TB)
+        public IActionResult Index2(double Side1TB, double Side2TB, double Side3TB)
         {
-            try
-            {
-                Area area = new Area();
-                string answer = area.isRectangularTriangle(Side1TB, Side2TB, Side3TB);
-                ViewBag.Triangle = answer;
-                return View(area);
-            }
-            catch(Exception ex)
-            {
-                return View(ex.Message.ToString());
-            }
+            return View("Index", $"Площадь треугольника = {Convert.ToString(new Triangle(Side1TB, Side2TB, Side3TB).Area())}. {(new Triangle(Side1TB, Side2TB, Side3TB).IsRectangularTriangle())}");
         }
+        
 
         public IActionResult Privacy()
         {
