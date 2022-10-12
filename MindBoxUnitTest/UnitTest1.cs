@@ -10,12 +10,8 @@ namespace MindBoxUnitTest
         [TestMethod]
         public void CircleArea_Radius_30()
         {
-            // arrange
-            double expected = 2827.35;
-            // act
-            double result = new Circle(30).Area();
             // assert
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(2827.35, new Circle(30).Area());
         }
 
         [TestMethod]
@@ -23,6 +19,19 @@ namespace MindBoxUnitTest
         {
             // assert
             Assert.AreEqual(0, new Triangle(12,3,4).Area());
+        }
+
+        [TestMethod]
+        public void IsRectangularTriangle_Side1_3_Side2_4_Side3_5()
+        {
+            // assert
+            Assert.AreEqual("Прямоугольный треугольник", new Triangle(3,4,5).IsRectangularTriangle());
+        }
+
+        [TestMethod]
+        public void IsRectangularTriangle_Side1_2_Side2_4_Side3_3()
+        {
+            Assert.AreEqual("НЕ прямоугольный треугольник", new Triangle(2, 4, 3).IsRectangularTriangle());
         }
     }
 }

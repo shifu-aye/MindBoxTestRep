@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SquareLib
 {
-    public class Circle : Figure
+    public class Circle : Figure<double>
     {
         public double Radius { get; set; }
         public const double Pi = 3.1415;

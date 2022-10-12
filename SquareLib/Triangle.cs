@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SquareLib
 {
-    public class Triangle : Figure
+    public class Triangle : Figure<double>
     {
         private readonly double side1;
         private readonly double side2;
@@ -24,6 +24,7 @@ namespace SquareLib
         /// <param name="side3">Третья сторона</param>
         public Triangle(double side1, double side2, double side3)
         {
+            NameFigure = "Треугольник";
             this.side1 = side1;
             this.side2 = side2;
             this.side3 = side3;
@@ -36,9 +37,13 @@ namespace SquareLib
         {
             return (side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2) ? Math.Round((Math.Sqrt((side1 + side2 + side3) / 2 * ((side1 + side2 + side3) / 2 - side1) * ((side1 + side2 + side3) / 2 - side2) * (side1 + side2 + side3) / 2 - side3)),2) : 0.0;
         }
+        /// <summary>
+        /// Определение прямоугольности треугольника
+        /// </summary>
+        /// <returns>Возвращает прямоугольный треугольник или нет</returns>
         public string IsRectangularTriangle()
         {
-            return (Math.Pow(side1, 2) + Math.Pow(side2, 2) == Math.Pow(side3, 2)) ? "Прямоугольный треугольник" : "НЕ прямоугольный треугольник";
+            return (Math.Pow(side1, 2) + Math.Pow(side2, 2) == Math.Pow(side3, 2) && Math.Pow(side2, 2) + Math.Pow(side3, 2) == Math.Pow(side1, 2) && Math.Pow(side1, 2) + Math.Pow(side3, 2) == Math.Pow(side3, 2)) ? "Прямоугольный треугольник" : "НЕ прямоугольный треугольник";
         }
     }
 }
